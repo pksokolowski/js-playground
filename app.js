@@ -1,11 +1,16 @@
 import sampleSample from './samples/sampleSample.js';
 
 const samplesList = document.getElementById("samplesList")
+
 const samples = [
-    `<p id="but1">Click me.</p>`
+    {
+        id: 'Sample sample',
+        fun: sampleSample
+    }
 ];
 
 samples.forEach((sample) => {
-    samplesList.innerHTML += sample;
-    document.getElementById("but1").addEventListener("click", sampleSample);
+    const html = `<p id="${sample.id}">${sample.id}</p>`;
+    samplesList.innerHTML += html;
+    document.getElementById(`${sample.id}`).addEventListener("click", sample.fun);
 });
