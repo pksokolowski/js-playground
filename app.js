@@ -1,5 +1,6 @@
 import sampleSample from './samples/sampleSample.js';
 import settingThisInFunctions from './samples/settingThisInFunctions.js';
+import objectCreationSample from './samples/objectCreation.js';
 
 const COOKIE_NAME_SELECTED_SAMPLE_ID = 'selectedSampleId';
 
@@ -13,6 +14,10 @@ const samples = [
     {
         id: 'Setting this in functions',
         fun: settingThisInFunctions
+    },
+    {
+        id: 'object creation',
+        fun: objectCreationSample
     }
 ];
 
