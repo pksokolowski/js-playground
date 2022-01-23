@@ -19,7 +19,11 @@ const samples = [
 samples.forEach((sample) => {
     const html = `<p id="${sample.id}">${sample.id}</p>`;
     samplesList.innerHTML += html;
-    document.getElementById(`${sample.id}`).addEventListener("click", function () {
+});
+
+samples.forEach((sample) => {
+    document.getElementById(sample.id).addEventListener("click", function () {
+        console.log('click function called for: ${sample}');
         document.cookie = `${COOKIE_NAME_SELECTED_SAMPLE_ID}=${sample.id}`;
         runSelectedSample();
     });
