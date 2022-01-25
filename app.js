@@ -2,6 +2,7 @@ import sampleSample from './samples/sampleSample.js';
 import settingThisInFunctions from './samples/settingThisInFunctions.js';
 import objectCreationSample from './samples/objectCreation.js';
 import extensionFunctions from './samples/extensionFunctions.js';
+import thisInObjects from './samples/thisInObject.js';
 
 const COOKIE_NAME_SELECTED_SAMPLE_ID = 'selectedSampleId';
 
@@ -23,7 +24,11 @@ const samples = [
     {
         id: 'extension functions',
         fun: extensionFunctions
-    }
+    },
+    {
+        id: 'this in functions within objects',
+        fun: thisInObjects
+    },
 ];
 
 samples.forEach((sample) => {
