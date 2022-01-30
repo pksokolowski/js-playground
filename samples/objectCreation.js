@@ -29,4 +29,19 @@ export default function objectCreationSample() {
     Person.call(person2, 'name2');
 
     console.log(person2);
+
+    /*
+    Pure prototypal inheritance
+    */
+    const animal = {
+        name: 'default animal name',
+        eat: function (foodItemName) {
+            console.log(`an animal called ${this.name} just ate ${foodItemName}`);
+        }
+    };
+
+    const cat = Object.create(animal);
+    cat.name = 'litter spreader';
+
+    cat.eat('tuna');
 };
